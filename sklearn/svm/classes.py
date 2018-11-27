@@ -101,9 +101,10 @@ class LinearSVC(BaseEstimator, LinearClassifierMixin,
 
     Attributes
     ----------
-    coef_ : array, shape = [n_features] if n_classes == 2 else [n_classes, n_features]
-        Weights assigned to the features (coefficients in the primal
-        problem). This is only available in the case of a linear kernel.
+    coef_ : array, shape = [n_features] if n_classes == 2 else
+        [n_classes, n_features] Weights assigned to the features
+        (coefficients in the primal problem). This is only available
+        in the case of a linear kernel.
 
         ``coef_`` is a readonly property derived from ``raw_coef_`` that
         follows the internal memory layout of liblinear.
@@ -313,9 +314,10 @@ class LinearSVR(LinearModel, RegressorMixin):
 
     Attributes
     ----------
-    coef_ : array, shape = [n_features] if n_classes == 2 else [n_classes, n_features]
-        Weights assigned to the features (coefficients in the primal
-        problem). This is only available in the case of a linear kernel.
+    coef_ : array, shape = [n_features] if n_classes == 2 else
+        [n_classes, n_features] Weights assigned to the features
+        (coefficients in the primal problem). This is only available
+        in the case of a linear kernel.
 
         `coef_` is a readonly property derived from `raw_coef_` that
         follows the internal memory layout of liblinear.
@@ -563,9 +565,10 @@ class SVC(BaseSVC):
         probability=False, an empty array. Platt scaling uses the logistic
         function
         ``1 / (1 + exp(decision_value * probA_ + probB_))``
-        where ``probA_`` and ``probB_`` are learned from the dataset (Platt, 1999).
+        where ``probA_`` and ``probB_`` are learned from the dataset.
         For more information on the multiclass case and training procedure,
-        see section 8 of LIBSVM: A Library for Support Vector Machines (in References).
+        see Platt (1999) and section 8 of LIBSVM: A Library for Support Vector
+        Machines (in References).
 
     Examples
     --------
@@ -601,7 +604,6 @@ class SVC(BaseSVC):
     and comparison to regularized likelihood methods.
     <http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.41.1639>
     """
-
 
     _impl = 'c_svc'
 
